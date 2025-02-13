@@ -161,7 +161,7 @@ _Note: each row for each account_
 
 ## Contact and Support
 
-- **Help me with your referral** [Referral Link For Extension version](https://app.nodego.ai/r/NODE9D1B406A5F35)
+- **Help me with your referral** [Referral Link For Extension version](https://app.nodego.ai/r/NODE9D1B406A5F35) - [Telegram version](https://t.me/nodego_bot/app?startapp=NODE0190214CCB)
 - **Buy me a telegram account** [Here](https://t.me/KeoAirDropFreeNe/312/27801) or [Here](https://github.com/MeoMunDep/MeoMunDep)
 
 If you encounter any issues or have questions, feel free to reach out:
