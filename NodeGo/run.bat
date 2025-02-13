@@ -58,6 +58,10 @@ if not exist extensionDatas.txt (
     type nul > extensionDatas.txt
     echo Created extensionDatas.txt
 )
+if not exist telegramDatas.txt (
+    type nul > telegramDatas.txt
+    echo Created telegramDatas.txt
+)
 if not exist wallets.txt (
     type nul > wallets.txt
     echo Created wallets.txt
