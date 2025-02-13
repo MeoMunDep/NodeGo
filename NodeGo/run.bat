@@ -86,7 +86,7 @@ if exist "..\node_modules" (
 ) else (
     echo Using node_modules from current directory
 )
-node extension_meomundep
+node meomundep.js
 pause
 goto MENU
 
