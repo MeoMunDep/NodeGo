@@ -72,7 +72,7 @@ while true; do
             clear
             print_yellow "Installing/Updating Node.js dependencies..."
             cd "$MODULES_DIR"
-            npm install user-agents axios colors p-limit https-proxy-agent socks-proxy-agent crypto-js ws uuid xlsx readline-sync moment lodash
+            npm install user-agents axios colors p-limit https-proxy-agent socks-proxy-agent 
             cd - > /dev/null
             print_green "Dependencies installation completed!"
             read -p "Press Enter to continue..."
@@ -88,7 +88,7 @@ while true; do
 
             check_configs
 
-            for file in extensionDatas.txt wallets.txt proxies.txt; do
+            for file in extensionDatas.txt telegramDatas.txt tokens.json wallets.txt proxies.txt; do
                 if [ ! -f "$file" ]; then
                     touch "$file"
                     print_green "Created $file"
@@ -114,7 +114,7 @@ while true; do
             else
                 print_green "Using node_modules from current directory"
             fi
-            node meomundep
+            node meomundep.js
             read -p "Press Enter to continue..."
             ;;
         4)
