@@ -12,7 +12,9 @@ Welcome to the bot setup guide! Follow the steps below to install and configure 
 2. [Installation Steps](#installation-steps)
 3. [Configuration Files](#configuration-files)
    - [`configs.json`](#1-configsjson)
-   - [`datas.txt`](#2-datastxt)
+   - [`telegramDatas.txt`](#2-telegramDatastxt)
+   - [`tokens.json`](#2.01-tokensjson)
+   - [`extensionDatas.txt`](#2.1-extensionDatastxt)
    - [`wallets.txt`](#3-walletstxt)
    - [`proxies.txt`](#4-proxiestxt)
 4. [Running the Bot](#running-the-bot)
@@ -96,6 +98,14 @@ This file controls the bot’s behavior. Below is an example configuration:
 query_id.../user...
 query_id.../user...
 query_id.../user...
+```
+
+### 2. `tokens.json` - 🗂️ User Data
+
+- Do not touch this file.
+
+```json
+{}
 ```
 
 ### 2.1 `extensionDatas.txt` - 🗂️ User Data
