@@ -92,7 +92,7 @@ This file controls the bot’s behavior. Below is an example configuration:
 
 ### 2. `telegramDatas.txt` - 🗂️ User Data
 
-- Fill the data for `telegramDatas.txt` file, get data from [here](https://t.me/KeoAirDropFreeNe/257/6879). This file contains user data in the following format:
+- [Get it from here](https://t.me/KeoAirDropFreeNee/1586). This file contains user data in the following format:
 
 ```txt
 query_id.../user...
