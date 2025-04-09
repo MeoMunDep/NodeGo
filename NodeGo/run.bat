@@ -1,98 +1,35 @@
 @echo off
-title NodeGo Bot by @MeoMunDep
+title name Bot by @MeoMunDep
 color 0A
 
-cd ..
-if exist node_modules (
-    echo Found node_modules in parent directory
-    cd %~dp0
-) else (
-    cd %~dp0
-    echo node_modules not found in parent directory
-)
+cd %~dp0
 
-:MENU
-cls
-echo =================================================================
-echo    NodeGo BOT SETUP AND RUN SCRIPT by @MeoMunDep
-echo =================================================================
-echo.
-echo Current directory: %CD%
-echo Parent node_modules: %~dp0..\node_modules
-echo.
-echo 1. Install/Update Node.js Dependencies
-echo 2. Create/Edit Configuration Files
-echo 3. Run the Bot
-echo 4. Exit
-echo.
-set /p choice="Enter your choice (1-4): "
+echo Checking configuration files...
 
-if "%choice%"=="1" goto INSTALL
-if "%choice%"=="2" goto CONFIG
-if "%choice%"=="3" goto RUN
-if "%choice%"=="4" goto EXIT
 
-:INSTALL
-cls
-echo Checking node_modules location...
+(for %%F in (extensionDatas.txt telegramDatas.txt tokens.json proxies.txt) do (
+    if not exist %%F (
+        type nul > %%F
+        echo Created %%F
+    )
+))
+
+echo Configuration files checked.
+
+echo Checking dependencies...
 if exist "..\node_modules" (
+    echo Using node_modules from parent directory...
     cd ..
-    echo Installing/Updating dependencies in parent directory...
-    npm install user-agents axios colors p-limit https-proxy-agent socks-proxy-agent 
+    CALL npm install user-agents axios colors https-proxy-agent socks-proxy-agent 
     cd %~dp0
 ) else (
     echo Installing dependencies in current directory...
-    npm install user-agents axios colors p-limit https-proxy-agent socks-proxy-agent 
+    CALL npm install user-agents axios colors https-proxy-agent socks-proxy-agent
 )
-echo.
 echo Dependencies installation completed!
-pause
-goto MENU
 
-:CONFIG
-cls
-echo Creating configuration files...
-
-
-if not exist extensionDatas.txt (
-    type nul > extensionDatas.txt
-    echo Created extensionDatas.txt
-)
-if not exist telegramDatas.txt (
-    type nul > telegramDatas.txt
-    echo Created telegramDatas.txt
-)
-if not exist wallets.txt (
-    type nul > wallets.txt
-    echo Created wallets.txt
-)
-if not exist proxies.txt (
-    type nul > proxies.txt
-    echo Created proxies.txt
-)
-if not exist tokens.json (
-    type nul > tokens.json
-    echo Created tokens.json
-)
-
-echo.
-echo Configuration files have been created/checked.
-echo Please edit the files with your data before running the bot.
-echo.
-pause
-goto MENU
-
-:RUN
-cls
 echo Starting the bot...
-if exist "..\node_modules" (
-    echo Using node_modules from parent directory
-) else (
-    echo Using node_modules from current directory
-)
-node meomundep.js
-pause
-goto MENU
+node meomundep
 
-:EXIT
+pause
 exit
