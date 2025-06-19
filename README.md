@@ -45,7 +45,7 @@ Download Node.js and npm here: [Download Link](https://t.me/KeoAirDropFreeNe/257
    Open your terminal or command prompt, navigate to the folder where the bot files are located, and run:
 
    ```bash
-   npm install --force user-agents axios colors https-proxy-agent socks-proxy-agent 
+   npm install --force user-agents axios meo-forkcy-colors meo-forkcy- https-proxy-agent socks-proxy-agent 
    ```
 
    If you encounter an Execution Policy error on Windows, run:
@@ -69,7 +69,6 @@ This file controls the bot’s behavior. Below is an example configuration:
 
 ```json
 {
-  "timeZone": "en-US",
   "rotateProxy": false,
   "skipInvalidProxy": false,
   "proxyRotationInterval": 2,
@@ -81,7 +80,6 @@ This file controls the bot’s behavior. Below is an example configuration:
 ```
 
 - **Fields Explained:**
-  - `timeZone`: Time zone setting (e.g., "en-US").
   - `rotateProxy`: Enable or disable proxy rotation.
   - `skipInvalidProxy`: Skip invalid proxies if `true`.
   - `proxyRotationInterval`: Time interval (in minutes) for rotating proxies.
@@ -158,7 +156,7 @@ _Note: each row for each account_
 1. Navigate to the folder containing the bot files:
 
    ```bash
-   cd /path/to/meomundep-folder
+   cd /path/to/nodego
    ```
 
 2. Run the bot using the following command:
